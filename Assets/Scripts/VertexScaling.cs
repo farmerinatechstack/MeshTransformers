@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class VertexTransform : MonoBehaviour
+public class VertexScaling : MonoBehaviour
 {
     public float framesPerTransition;
     public bool isScaledDown;

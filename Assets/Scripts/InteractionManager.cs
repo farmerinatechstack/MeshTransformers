@@ -9,8 +9,8 @@ public class InteractionManager : MonoBehaviour
     public int numCycles;
     public bool cyclesAreComplete;
     public bool runEndAnimation;
-    public VertexTransform mainMeshTransformer;
-    public VertexTransform[] otherMeshTransformers;
+    public VertexScaling mainMeshTransformer;
+    public VertexScaling[] otherMeshTransformers;
     public static InteractionManager GetInstance()
     {
         return instance;
@@ -21,7 +21,7 @@ public class InteractionManager : MonoBehaviour
         instance = value;
     }
     private static InteractionManager instance;
-    private VertexTransform currentMesh;
+    private VertexScaling currentMesh;
     private int completedCycles;
 
     // Start is called before the first frame update
@@ -42,7 +42,7 @@ public class InteractionManager : MonoBehaviour
         mainMeshTransformer.isScaledDown = true;
         mainMeshTransformer.canTransition = false;
 
-        foreach (VertexTransform vt in otherMeshTransformers)
+        foreach (VertexScaling vt in otherMeshTransformers)
         {
             vt.isScaledDown = true;
             vt.canTransition = false;
